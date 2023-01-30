@@ -1,0 +1,34 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="PaginaMaster.master.vb" Inherits="S4E.WebForms.PaginaMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="text-align:center"><asp:Image ID="Img_Logo" runat="server" ImageUrl="~/Imagens/concept1.png" /></div>
+    <h1 style="text-align:center">
+        <asp:Menu ID="Menu_Principal" runat="server" Font-Bold="True" Font-Size="XX-Large" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem Text="|Pagina Principal" Value="|Pagina Principal" NavigateUrl="~/Forms/Frm_index.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Forms/Frm_Associados.aspx" Text="|Associados" Value="|Associados"></asp:MenuItem>
+                <asp:MenuItem Text="|Empresas" Value="|Empresas" NavigateUrl="~/Forms/Frm_Empresas.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Forms/Frm_AdicionarAssociado.aspx" Text="|Adicionar Associado" Value="|Adicionar Associado"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Forms/Frm_AdicionarEmpresa.aspx" Text="|Adicionar Empresa" Value="|Adicionar Empresa"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </h1>
+    </form>
+
+    <footer>Projeto Feito Por Eduardo Mariano Tonaco</footer>
+</body>
+
+</html>
